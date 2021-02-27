@@ -1,6 +1,7 @@
 package com.example.Java9to15Features.service;
 
 import com.example.Java9to15Features.DTO;
+import com.example.Java9to15Features.customBeanScope.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
@@ -11,10 +12,15 @@ public class Service {
     @Autowired
     DTO dto;
 
+    @Autowired
+    GreetingService greetingService;
+
     public void addData() {
         dto.names=new ArrayList<>();
         dto.names.add("Chaluvadi");
-        System.out.println(dto);
+        System.out.println(" dto "+dto);
+
+        System.out.println(" greetingService "+greetingService);
     }
 }
 

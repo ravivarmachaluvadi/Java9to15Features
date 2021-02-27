@@ -9,8 +9,9 @@ import org.springframework.web.context.annotation.SessionScope;
 import java.util.ArrayList;
 import java.util.List;
 
+//@RequestScope
 @org.springframework.stereotype.Service
-@RequestScope
+@Scope("tenant")
 public class DTO {
 
     public List<String> names=new ArrayList<>();

@@ -1,23 +1,33 @@
 package com.example.Java9to15Features.controller;
 
 import com.example.Java9to15Features.DTO;
+import com.example.Java9to15Features.customBeanScope.GreetingService;
+import com.example.Java9to15Features.customBeanScope.TenantScope;
 import com.example.Java9to15Features.service.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.annotation.SessionScope;
 
 import java.util.ArrayList;
 
 
-@org.springframework.web.bind.annotation.RestController
-public class RestController {
+@RestController
+public class RestController1 {
 
     @Autowired
     DTO dto;
 
     @Autowired
+    GreetingService greetingService;
+
+    @Autowired
     Service service;
+
+    @Autowired
+    ApplicationContext applicationContext;
 
     @RequestMapping
     public void Method(){
@@ -27,8 +37,9 @@ public class RestController {
 
         service.addData();
 
-        System.out.println(dto);
+        System.out.println(" dto "+dto);
 
+        System.out.println(" greetingService "+greetingService);
     }
 }
 
