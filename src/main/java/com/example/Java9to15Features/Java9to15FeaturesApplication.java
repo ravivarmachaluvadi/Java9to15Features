@@ -55,9 +55,5 @@ public class Java9to15FeaturesApplication implements CommandLineRunner {
 		System.out.println(str);
 		System.out.println(str.lines().collect(Collectors.toList()));
 
-		restController1.Method();
-
-		restController1.Method();
-
 	}
 }

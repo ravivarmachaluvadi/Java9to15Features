@@ -18,9 +18,9 @@ public class Service {
     public void addData() {
         dto.names=new ArrayList<>();
         dto.names.add("Chaluvadi");
-        System.out.println(" dto "+dto);
+        System.out.println(" dto from Service        =======>     "+dto);
 
-        System.out.println(" greetingService "+greetingService);
+        System.out.println(" greetingService from Service        =======>     "+greetingService);
     }
 }
 

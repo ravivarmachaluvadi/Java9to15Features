@@ -10,27 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class DTO1 implements Scope {
+public class DTO1 {
 
-    public List<String> names=new ArrayList<>();
-
-    @Override
-    public String value() {
-        return null;
-    }
-
-    @Override
-    public String scopeName() {
-        return null;
-    }
-
-    @Override
-    public ScopedProxyMode proxyMode() {
-        return null;
-    }
-
-    @Override
-    public Class<? extends Annotation> annotationType() {
-        return null;
-    }
 }
